@@ -17,7 +17,7 @@ def caesar():
 @app.route("/encrypt", methods=['POST'])
 def caesar_encrypt():
     text = request.form['plaintext']  # hoặc inputPlainText tùy theo HTML
-    key = int(request.form['shift'])  # hoặc inputKeyPlain
+    key = int(request.form['inputKeyPlain'])  # hoặc inputKeyPlain
 
     caesar = CaesarCipher()
     encrypted_text = caesar.encrypt_text(text, key)
